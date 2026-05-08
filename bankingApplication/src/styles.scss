@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+.app-header {
+  height: 12vh;          /* header takes 15% of viewport height */
+  width: 100%;           /* full width */
+  background-color: #84aede;
+  display: flex;         /* enable flexbox */
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+//   position: fixed;   /* fixes it to viewport */
+  top: 0;            /* stick to top */
+  left: 0;
+  z-index: 1000;     /* keep it above other content */
+}
+
+.app-footer{
+  height: 12vh;          /* header takes 15% of viewport height */
+  width: 100%;           /* full width */
+  background-color: #c3e6e5; 
+  display: flex;         /* enable flexbox */
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+//   position: fixed;   /* fixes it to viewport */
+  bottom: 0;         /* stick to bottom */
+  left: 0;
+}

@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-root {                /* your main wrapper (often app.component.html root) */
+  display: flex;
+  flex-direction: column;  /* stack header, content, footer vertically */
+  min-height: 100vh;       /* full viewport height */
+}
+
+app-header {
+  height: 15vh;            /* header height */
+}
+
+app-footer {
+  height: 10vh;            /* footer height */
+}
+
+.router-container {
+  flex: 1;                 /* take up all remaining space */
+  overflow-y: auto;        /* scroll if content is taller */
+  margin-left: 5%;        /* 10% margin on the left */
+  margin-right: 5%;       /* 10% margin on the right */
+}
+
