@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-promises',
@@ -6,4 +6,17 @@ import { Component } from '@angular/core';
   templateUrl: './promises.html',
   styleUrl: './promises.scss',
 })
-export class Promises {}
+export class Promises implements OnInit{
+
+  promisesTopics = ["async,await", ".then", "promise.all","promise.allSetteld", "promise.race", "promise.async"]
+
+
+  constructor(){
+
+  };
+
+  ngOnInit() {
+    
+  };
+  
+}
