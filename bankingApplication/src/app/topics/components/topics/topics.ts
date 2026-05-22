@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topics',
@@ -6,4 +7,24 @@ import { Component } from '@angular/core';
   templateUrl: './topics.html',
   styleUrl: './topics.scss',
 })
-export class Topics {}
+export class Topics implements OnInit{
+
+  topics = ['promises', 'observables','signals'];
+  codingTopics = ['for', 'forEach', 'for-of', 'for-in'];
+  
+  constructor(private path : Router){
+
+  };
+
+  ngOnInit(): void {
+    
+  };
+
+  onTopicClick(event: any){
+    this.path.navigate([`/${event}`])
+  };
+
+  onCodingTopicClick(event: any){
+    alert(event);
+  }
+}
