@@ -11,7 +11,9 @@
             @for(sub of subjectsConcepts; track sub){
                 <h3 style="cursor: pointer;" (click)=naviagteToRes(sub)>{{sub}}</h3>
             }
+            <router-outlet></router-outlet>
         </div>
     </div>
-
 </div>
+
+

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, lastValueFrom  } from 'rxjs';
+import { Router } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-observables',
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './observables.html',
   styleUrl: './observables.scss',
 })
@@ -13,7 +15,7 @@ export class Observables implements OnInit {
   rxjsOperators = ["one", "two", "three"];
 
 
-  constructor() {
+  constructor(private path: Router) {
 
   };
 
@@ -120,8 +122,8 @@ export class Observables implements OnInit {
   };
 
   naviagteToRes(val: any){
-    console.log(val);
-    
+    let actualVal = val.split(".")[1];
+    this.path.navigate([`/observables/${actualVal}`]);
   }
 
 
