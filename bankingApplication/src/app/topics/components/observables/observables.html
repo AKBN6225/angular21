@@ -1,1 +1,17 @@
-<p>observables works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>observables</h1>
+            @for(obs of observablesConcepts; track obs){
+                <h3>{{obs}}</h3>
+            }
+        </div>
+        <div class="col-sm-6">
+            <h1>subjects</h1>
+            @for(sub of subjectsConcepts; track sub){
+                <h3 style="cursor: pointer;" (click)=naviagteToRes(sub)>{{sub}}</h3>
+            }
+        </div>
+    </div>
+
+</div>
