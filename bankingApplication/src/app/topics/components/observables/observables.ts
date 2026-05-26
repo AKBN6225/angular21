@@ -40,7 +40,7 @@ export class Observables implements OnInit {
       console.log("observable is lazy");
     });
     // here the promise log is printed , which means the inner code is executed even if we are not consuming
-    // the observable log is not printed untill unless we subscribe
+    // the observable log is not printed untill unless we subscribe which means the below code
 
     myObservable.subscribe((data) => {
       console.log(data);
