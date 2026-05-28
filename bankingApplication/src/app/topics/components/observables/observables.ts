@@ -12,7 +12,7 @@ import { RouterOutlet } from '@angular/router';
 export class Observables implements OnInit {
   observablesConcepts = ["1.observable definition","2.promises are eager & observables are lazy", "3.creating observable with subscribing & unsubscribing","4.diff btw observable and subject"];
   subjectsConcepts = ["1.Subject", "2.BehaviouralSubject", "3.ReplaySubject", "4.AsyncSubject"];
-  rxjsOperators = ["one", "two", "three"];
+  rxjsOperators = ["1.creationOperators", "2.transformOperators"];
 
 
   constructor(private path: Router) {

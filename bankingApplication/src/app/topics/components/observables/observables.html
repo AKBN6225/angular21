@@ -1,18 +1,33 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-5">
             <h1>observables</h1>
             @for(obs of observablesConcepts; track obs){
                 <h3>{{obs}}</h3>
             }
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-5">
             <h1>subjects</h1>
             @for(sub of subjectsConcepts; track sub){
                 <h3 style="cursor: pointer;" (click)=naviagteToRes(sub)>{{sub}}</h3>
             }
-            <router-outlet></router-outlet>
+            <div>
+                <h1>*** Key Note for Subject</h1>
+                <h2>. unsubscribe can happen through subscriptions and next can happen through real subjects only</h2>
+                <h2>. const subscription = mySubject.subscribe(val => console.log(val)); subscription.unsubscribe(); // stops listening</h2>
+                <h2>. mySubject.next("Hello");</h2>
+            </div>
         </div>
+        <div class="col-sm-2">
+            <h1>operators: (creates observables)</h1>
+            @for(op of rxjsOperators; track op){
+                <h3 style="cursor: pointer;" (click)=naviagteToRes(op)>{{op}}</h3>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <router-outlet></router-outlet>
     </div>
 </div>
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AsyncSubjectService } from '../../services/async-subject';
 
 @Component({
   selector: 'app-async-subject',
@@ -6,4 +7,17 @@ import { Component } from '@angular/core';
   templateUrl: './async-subject.html',
   styleUrl: './async-subject.scss',
 })
-export class AsyncSubject {}
+export class AsyncSubject implements OnInit{
+
+  constructor(
+    private AsyncSubjectServiceInstance: AsyncSubjectService
+  ){
+
+  };
+
+  ngOnInit() {
+    this.AsyncSubjectServiceInstance.myAsyncSubject.subscribe((data) => {
+      console.log(data, "ASYNCCCCCCCCCCCCC");
+    })
+  }
+}
