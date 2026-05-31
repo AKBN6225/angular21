@@ -10,6 +10,11 @@ import { ReplaySubject } from './topics/components/replay-subject/replay-subject
 import { AsyncSubject } from './topics/components/async-subject/async-subject';
 import { CreationOperators } from './topics/components/creation-operators/creation-operators';
 import { TransformOperators } from './topics/components/transform-operators/transform-operators';
+import { RoutingBase } from './topics/components/routing-base/routing-base';
+import { Pagenotfound } from './topics/components/pagenotfound/pagenotfound';
+import { Queryparam } from './topics/components/queryparam/queryparam';
+import { Routeparameters } from './topics/components/routeparameters/routeparameters';
+import { RoutrParamsList } from './topics/components/routr-params-list/routr-params-list';
 
 export const routes: Routes = [
     {
@@ -57,5 +62,17 @@ export const routes: Routes = [
                 component: TransformOperators
             }
         ]
+    },
+    {
+        path: "routing",
+        component: RoutingBase,
+    },
+    {
+        path: 'routing/:id',
+        component: RoutrParamsList
+    },
+    {
+        path:"**",
+        component: Pagenotfound
     }
 ];

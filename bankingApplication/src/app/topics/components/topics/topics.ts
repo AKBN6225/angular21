@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class Topics implements OnInit{
 
-  topics = ['promises', 'observables','signals'];
+  topics = ['promises', 'observables','routing','signals'];
   codingTopics = ['for', 'forEach', 'for-of', 'for-in'];
   
   constructor(private path : Router){
@@ -17,7 +17,7 @@ export class Topics implements OnInit{
   };
 
   ngOnInit(): void {
-    
+    this.randomTopicsBraning();
   };
 
   onTopicClick(event: any){
@@ -26,5 +26,11 @@ export class Topics implements OnInit{
 
   onCodingTopicClick(event: any){
     alert(event);
-  }
+  };
+
+  randomTopicsBraning(){
+
+  };
+
+  
 }

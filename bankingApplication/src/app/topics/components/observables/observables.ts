@@ -117,7 +117,7 @@ export class Observables implements OnInit {
     // signals can pass data for sync operations and with one dynamic value
     // subjects can handle bith sync and async operations and can pass multiple values
 
-    // signals can no handle like switchmap, debounce and continous stream of api data like that
+    // signals can not handle like switchmap, debounce and continous stream of api data like that
 
   };
 

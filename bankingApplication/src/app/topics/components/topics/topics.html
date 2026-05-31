@@ -1,16 +1,19 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             @for (topic of topics; track topic) {
             <h3 class="topicList" (click)="onTopicClick(topic)" style="cursor: pointer;">{{topic}}</h3>
             }
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             @for (ctopic of codingTopics; track ctopic) {
             <h3 class="topicList" (click)="onCodingTopicClick(ctopic)" style="cursor: pointer;">{{ctopic}}</h3>
             }
+        </div>
+        <div class="col-sm-4">
+            <h1>Js topics</h1>  
         </div>
         
     </div>
