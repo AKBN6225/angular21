@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1 class="topicList">one way data Binding</h1>
+            @for(dbTopic of oneWayDataBindingTopics; track dbTopic){
+                <h3 class="topicList">{{dbTopic}}</h3>
+            }
+        </div>
+        <div class="col-sm-6">
+            <h1 class="topicList">two way data binding</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="color: cadetblue;">stringInterpolaation Binding</h1>
+    <h3 style="color: cadetblue;">{{name}}</h3>
+    <h3 style="color: cadetblue;">{{stringInterpolattion()}}</h3>
+    <img src="{{imagePath}}", alt="" style="height: 100px; width: 100px;">
+</div>
+
+<div class="container">
+    <h1 style="color: cadetblue;">property Binding</h1>
+    <img [src]="imagePath", alt="" style="height: 100px; width: 100px;"><br><br>
+    <input type="text" [value]="val"> <br><br>
+    <button [disabled] = "isDisabled" >property binding</button>
+</div>

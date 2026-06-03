@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class Topics implements OnInit{
 
-  topics = ['promises', 'observables','routing','signals'];
+  topics = ['promises', 'observables','routing','signals','dataBinding'];
   codingTopics = ['for', 'forEach', 'for-of', 'for-in'];
   
   constructor(private path : Router){

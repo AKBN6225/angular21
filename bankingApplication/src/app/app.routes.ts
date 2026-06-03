@@ -15,6 +15,7 @@ import { Pagenotfound } from './topics/components/pagenotfound/pagenotfound';
 import { Queryparam } from './topics/components/queryparam/queryparam';
 import { Routeparameters } from './topics/components/routeparameters/routeparameters';
 import { RoutrParamsList } from './topics/components/routr-params-list/routr-params-list';
+import { DataBinding } from './topics/components/data-binding/data-binding';
 
 export const routes: Routes = [
     {
@@ -70,6 +71,10 @@ export const routes: Routes = [
     {
         path: 'routing/:id',
         component: RoutrParamsList
+    },
+    {
+        path : 'dataBinding',
+        component: DataBinding
     },
     {
         path:"**",
