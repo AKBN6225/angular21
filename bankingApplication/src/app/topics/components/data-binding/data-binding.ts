@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-data-binding',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.scss',
 })
@@ -16,7 +18,23 @@ export class DataBinding implements OnInit{
 
   val: any = 10;
 
-  isDisabled: boolean = true
+  isDisabled: boolean = true;
+
+  isActive: boolean = true;
+
+  applyC1: boolean = true;
+  applyC2: boolean = true;
+
+  hasError: boolean = true;
+  cvar: string = "blue";
+
+  myStyle: object = {
+    color: 'red',
+    background: 'yellow'
+  };
+
+  userName: string = "";
+  city: string = "Hyderabad"
 
 
   constructor(){
@@ -25,7 +43,8 @@ export class DataBinding implements OnInit{
 
   ngOnInit(){
     this.stringInterpolattion();
-    this.attributeBinding();
+    this.propertyBindingggg();
+    this.classBindingggg();
   };
 
   stringInterpolattion(){
@@ -41,8 +60,20 @@ export class DataBinding implements OnInit{
 
   };
 
-  attributeBinding(){
+  propertyBindingggg(){
+    // imag tag - src, input tag - value, button - disabled all are properties
+  };
 
+  classBindingggg(){
+
+  };
+
+  checkName(e: any){
+    this.userName = e.target.value;
+  };
+
+  makeCaps(){
+    this.city = this.city.toUpperCase();
   }
 
 

@@ -13,15 +13,44 @@
 </div>
 
 <div class="container">
-    <h1 style="color: cadetblue;">stringInterpolaation Binding</h1>
+    <h1 style="color: cadetblue;">stringInterpolaation Binding (from ts -> html file)</h1>
     <h3 style="color: cadetblue;">{{name}}</h3>
     <h3 style="color: cadetblue;">{{stringInterpolattion()}}</h3>
     <img src="{{imagePath}}", alt="" style="height: 100px; width: 100px;">
 </div>
 
 <div class="container">
-    <h1 style="color: cadetblue;">property Binding</h1>
+    <h1 style="color: cadetblue;">property Binding (from ts -> html file)</h1>
     <img [src]="imagePath", alt="" style="height: 100px; width: 100px;"><br><br>
     <input type="text" [value]="val"> <br><br>
     <button [disabled] = "isDisabled" >property binding</button>
+</div>
+
+<div class="container">
+    <h1 style="color: cadetblue;">Class Binding (from ts -> html file)</h1>
+    <h3 [class] = "isActive? 'active': 'inActive'">Dynamic class binding</h3>
+    <h3 [class] = "{c1:applyC1, c2:applyC2}">Applying two classes at a time through object</h3>
+    <h3 [class] = "['c1', 'c2']">Applying two classes at a time through array</h3>
+    <h3 [class.active] = isActive>inside class</h3>
+</div>
+
+<div class="container">
+    <h1 style="color: cadetblue;">Style Binding (from ts -> html file)</h1>
+    <h3 [style.color] = "hasError? 'red': 'green'">inline styles</h3>
+    <h3 [style] = "{color: cvar}">Style Applying</h3>
+    <h3 [style.color] = "cvar"> Hiiiii</h3>
+    <h3 [style] = "myStyle">checkkk</h3>
+</div>
+
+<div class="container">
+    <h1 style="color: cadetblue;">Event Binding (from html -> ts file)</h1>
+    <input type="text" (input) = "checkName($event)">
+    <h1>Entered Name : {{userName}}</h1>
+</div>
+
+<div class="container">
+    <h1 style="color: cadetblue;">Two way Data Binding</h1>
+    <h3> city : <input type="text" [(ngModel)] = "city"></h3>
+    <h4>{{city}}</h4>
+    <button (click) = "makeCaps()">click me caps</button>
 </div>
