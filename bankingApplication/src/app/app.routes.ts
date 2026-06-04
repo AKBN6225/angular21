@@ -21,6 +21,7 @@ import { ControlFlowStatements } from './topics/components/control-flow-statemen
 import { NgTemplateContentContainer } from './topics/components/ng-template-content-container/ng-template-content-container';
 import { Pipes } from './topics/components/pipes/pipes';
 import { TemplateRefereneceVariable } from './topics/components/template-referenece-variable/template-referenece-variable';
+import { AsyncPipe } from './topics/components/async-pipe/async-pipe';
 
 export const routes: Routes = [
     {
@@ -92,6 +93,10 @@ export const routes: Routes = [
     {
         path: "templateRefVar",
         component: TemplateRefereneceVariable
+    },
+    {
+        path: "asyncPipe",
+        component: AsyncPipe
     },
     {
         path: 'controlFlow',

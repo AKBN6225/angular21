@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 style="color: rgb(68, 30, 240);">Def: It used to directly get data from the api with out subscribing or .then for promises.</h1>
+    <h1 style="color: rgb(68, 30, 240);">Def: It used to show asynchronus data directly on the screen with subscribing or .then for promises </h1>
+    <h1 style="color: rgb(245, 24, 24);">*** Async pipe unscubscribes it's self once the component is destroyed means navigating to other component also</h1>
+</div>
+
+<div class="container">
+    @for (user of users | async; track user.id) {
+        <h3>{{ user.name }}</h3>
+    }
+</div>
