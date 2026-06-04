@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-template-referenece-variable',
@@ -6,4 +6,20 @@ import { Component } from '@angular/core';
   templateUrl: './template-referenece-variable.html',
   styleUrl: './template-referenece-variable.scss',
 })
-export class TemplateRefereneceVariable {}
+export class TemplateRefereneceVariable implements OnInit {
+
+  tempValue = '';
+
+  constructor(){
+
+  };
+
+  ngOnInit(): void {
+    
+  };
+
+  sendData(val: any){
+    this.tempValue = val;
+  }
+
+}
