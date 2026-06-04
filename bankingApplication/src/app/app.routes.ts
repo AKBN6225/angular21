@@ -17,6 +17,10 @@ import { Routeparameters } from './topics/components/routeparameters/routeparame
 import { RoutrParamsList } from './topics/components/routr-params-list/routr-params-list';
 import { DataBinding } from './topics/components/data-binding/data-binding';
 import { Directives } from './topics/components/directives/directives';
+import { ControlFlowStatements } from './topics/components/control-flow-statements/control-flow-statements';
+import { NgTemplateContentContainer } from './topics/components/ng-template-content-container/ng-template-content-container';
+import { Pipes } from './topics/components/pipes/pipes';
+import { TemplateRefereneceVariable } from './topics/components/template-referenece-variable/template-referenece-variable';
 
 export const routes: Routes = [
     {
@@ -80,6 +84,22 @@ export const routes: Routes = [
     {
         path: 'directives',
         component: Directives
+    },
+    {
+        path: 'pipes',
+        component: Pipes
+    },
+    {
+        path: "templateRefVar",
+        component: TemplateRefereneceVariable
+    },
+    {
+        path: 'controlFlow',
+        component: ControlFlowStatements
+    },
+    {
+        path: "ngTemplate:ngContent:ngContainer",
+        component: NgTemplateContentContainer
     },
     {
         path:"**",

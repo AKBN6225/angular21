@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 style="color: rgb(6, 91, 91);">pipes: used to trasnform data before displaying on browser</h1>
+    <h1 style="color: rgb(7, 173, 173);">Built in pipes: </h1>
+    @for(x of builtInPipes; track x){
+    <h3 style="color: rgb(234, 71, 71);">{{x}}</h3>
+    }
+    <h1 style="color: rgb(7, 173, 173);">Custom pipes: removing zero from first character</h1>
+    <h3>Mobile Number: <input type="number" [(ngModel)]="mobileNumber" placeholder="Enter number"></h3>
+    <p>Formatted Number: {{ mobileNumber | removeZeroAtFirst }}</p>
+</div>
+
+<h1 style="color: red;">practice Built in pipes</h1>
+
+<h3 style="color: blueviolet;">{{text1 | uppercase}}</h3>
+<h3 style="color: blueviolet;">{{text2 | lowercase}}</h3>
+<h3 style="color: blueviolet;">{{text3 | titlecase}}</h3>
+<h3 style="color: blueviolet;">{{salary | currency: 'INR'}}</h3>
+<h3 style="color: blueviolet;">{{person | json}}</h3>
+<h3 style="color: blueviolet;">{{todayDate | date : 'dd/MM/yy'}}</h3>
+<h3 style="color: blueviolet;">{{marksPercent | percent}}</h3>
+<h3>{{companyName | slice: 2:4}}</h3>

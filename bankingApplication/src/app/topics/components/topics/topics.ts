@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class Topics implements OnInit{
 
-  topics = ['promises', 'observables','routing','signals','dataBinding','directives'];
+  topics = ['promises', 'observables','routing','signals','dataBinding','directives','pipes','templateRefVar'];
   codingTopics = ['for', 'forEach', 'for-of', 'for-in'];
+  angularLatestTopics = ['controlFlow','ngTemplate:ngContent:ngContainer']
   
   constructor(private path : Router){
 

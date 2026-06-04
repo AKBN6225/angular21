@@ -13,8 +13,10 @@
             }
         </div>
         <div class="col-sm-4">
-            <h1>Js topics</h1>  
+            @for (ALT of angularLatestTopics; track ALT) {
+            <h3 class="topicList" (click)="onTopicClick(ALT)" style="cursor: pointer;">{{ALT}}</h3>
+            }
         </div>
-        
+
     </div>
 </div>
