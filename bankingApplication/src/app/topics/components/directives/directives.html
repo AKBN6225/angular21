@@ -1,0 +1,37 @@
+<div class="container">
+    @for(directive of directiveTypes; track directive){
+        <h3 style="color: teal;">{{directive}}</h3>
+    }
+</div>
+
+<div class="container">
+    <h1 style="color: red;">Structural Directives</h1>
+    @for(directive of structuralDirectives; track directive){
+        <h3 style="color: teal;">{{directive}}</h3>
+    }
+</div>
+
+<div class="container">
+    <h1 style="color: red;">Attribute Directives</h1>
+    @for(directive of attributeDirectives; track directive){
+        <h3 style="color: teal;">{{directive}}</h3>
+    }
+</div>
+
+<h1 style="color: rgb(141, 150, 9);">/////////////Now code exapmples///////////////</h1>
+
+<div class="container">
+    <h3 *ngIf = "show">ngIf content</h3>
+</div>
+
+<div class="container" *ngFor= "let fruit of fruits; trackBy: trackByIndex">
+    <h3>{{fruit}}</h3>
+</div>
+
+<div class="container" [ngSwitch] = "operation">
+    <h1 *ngSwitchCase = "'+'">{{num1+num2}}</h1>
+    <h1 *ngSwitchCase = "'-'">{{num1-num2}}</h1>
+    <h1 *ngSwitchCase = "'*'">{{num1*num2}}</h1>
+    <h1 *ngSwitchCase = "'/'">{{num1/num2}}</h1>
+    <h1 *ngSwitchDefault>{{num1+num2}}</h1>
+</div>

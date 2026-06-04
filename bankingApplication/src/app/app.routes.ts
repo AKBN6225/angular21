@@ -16,6 +16,7 @@ import { Queryparam } from './topics/components/queryparam/queryparam';
 import { Routeparameters } from './topics/components/routeparameters/routeparameters';
 import { RoutrParamsList } from './topics/components/routr-params-list/routr-params-list';
 import { DataBinding } from './topics/components/data-binding/data-binding';
+import { Directives } from './topics/components/directives/directives';
 
 export const routes: Routes = [
     {
@@ -75,6 +76,10 @@ export const routes: Routes = [
     {
         path : 'dataBinding',
         component: DataBinding
+    },
+    {
+        path: 'directives',
+        component: Directives
     },
     {
         path:"**",
