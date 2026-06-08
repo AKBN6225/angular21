@@ -23,6 +23,7 @@ import { Pipes } from './topics/components/pipes/pipes';
 import { TemplateRefereneceVariable } from './topics/components/template-referenece-variable/template-referenece-variable';
 import { AsyncPipe } from './topics/components/async-pipe/async-pipe';
 import { Ngrx } from './topics/components/ngrx/ngrx';
+import { NgrxDataBind } from './topics/components/ngrx-data-bind/ngrx-data-bind';
 
 export const routes: Routes = [
     {
@@ -102,6 +103,10 @@ export const routes: Routes = [
     {
         path: 'ngrx',
         component: Ngrx
+    },
+    {
+        path: 'ngrxDataBind',
+        component: NgrxDataBind
     },
     {
         path: 'controlFlow',

@@ -1,1 +1,45 @@
-<p>ngrx works!</p>
+<div class="container">
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-2">
+            <h3>Name: </h3>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" #name>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success" (click)="sendDataToStore('name',name.value)">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-2">
+            <h3>Mobile: </h3>
+        </div>
+        <div class="col-sm-3">
+            <input type="number" #mobileNumber>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success" (click)="sendDataToStore('mobile',mobileNumber.value)">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-2">
+            <h3>E-Mail: </h3>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" #email>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success" (click)="sendDataToStore('email',email.value)">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <button class="btn btn-warning" style="margin-top: 30px; margin-left: 190px;" (click)="moveTo()">Move to check store Data</button>
+</div>
