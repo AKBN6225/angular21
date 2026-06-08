@@ -22,6 +22,7 @@ import { NgTemplateContentContainer } from './topics/components/ng-template-cont
 import { Pipes } from './topics/components/pipes/pipes';
 import { TemplateRefereneceVariable } from './topics/components/template-referenece-variable/template-referenece-variable';
 import { AsyncPipe } from './topics/components/async-pipe/async-pipe';
+import { Ngrx } from './topics/components/ngrx/ngrx';
 
 export const routes: Routes = [
     {
@@ -97,6 +98,10 @@ export const routes: Routes = [
     {
         path: "asyncPipe",
         component: AsyncPipe
+    },
+    {
+        path: 'ngrx',
+        component: Ngrx
     },
     {
         path: 'controlFlow',
