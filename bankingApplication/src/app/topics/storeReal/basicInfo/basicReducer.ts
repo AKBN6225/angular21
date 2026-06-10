@@ -1,4 +1,4 @@
-import { createReducer, on} from "@ngrx/store";
+import { createReducer, on } from "@ngrx/store";
 import { basicState } from "./basicState";
 import { updateFirstName } from "./basicActions";
 import { updateLastName } from "./basicActions";
@@ -17,20 +17,20 @@ let initialState: basicState = {
 
 export const basicReducer = createReducer(initialState,
 
-    on(updateFirstName, (state, action)=> ({
-        ... state,
-        firstName : action.fName
+    on(updateFirstName, (state, action) => ({
+        ...state,
+        firstName: action.fName
     })),
-        on(updateLastName, (state, action)=> ({
-        ... state,
-        lastName : action.lName
+    on(updateLastName, (state, action) => ({
+        ...state,
+        lastName: action.lName
     })),
-        on(updateMobile, (state, action)=> ({
-        ... state,
-        mobile : action.mobile
+    on(updateMobile, (state, action) => ({
+        ...state,
+        mobile: action.mobile
     })),
-        on(updateEmail, (state, action)=> ({
-        ... state,
-        email : action.email
+    on(updateEmail, (state, action) => ({
+        ...state,
+        email: action.email
     }))
 )
