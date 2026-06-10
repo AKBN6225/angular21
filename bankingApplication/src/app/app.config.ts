@@ -2,6 +2,7 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { userReducer } from './topics/store/userInfo';
+import { basicReducer } from './topics/storeReal/basicInfo/basicReducer';
 
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
@@ -13,6 +14,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
-    provideStore( {userDetails: userReducer }),
+    provideStore( {userDetails: userReducer, basic: basicReducer }),
   ],
 };

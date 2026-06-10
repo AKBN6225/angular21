@@ -24,6 +24,8 @@ import { TemplateRefereneceVariable } from './topics/components/template-referen
 import { AsyncPipe } from './topics/components/async-pipe/async-pipe';
 import { Ngrx } from './topics/components/ngrx/ngrx';
 import { NgrxDataBind } from './topics/components/ngrx-data-bind/ngrx-data-bind';
+import { NgrxBasic } from './topics/components/ngrxComponents/ngrx-basic/ngrx-basic';
+import { NgrxBasicConsume } from './topics/components/ngrxComponents/ngrx-basic-consume/ngrx-basic-consume';
 
 export const routes: Routes = [
     {
@@ -103,6 +105,14 @@ export const routes: Routes = [
     {
         path: 'ngrx',
         component: Ngrx
+    },
+    {
+        path: 'ngrxReal',
+        component: NgrxBasic
+    },
+    {
+        path: "ngrxBasicConsume",
+        component: NgrxBasicConsume
     },
     {
         path: 'ngrxDataBind',

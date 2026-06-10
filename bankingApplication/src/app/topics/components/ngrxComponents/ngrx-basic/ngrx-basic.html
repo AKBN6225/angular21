@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <h3>First Name :</h3>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" #fName>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-warning" (click)="updateDataToStore(fName.value, 'firstNameEdit')">Update</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <h3>Last Name :</h3>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" #lName>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-warning" (click)="updateDataToStore(lName.value, 'lastNameEdit')">Update</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <h3>Mobile :</h3>
+        </div>
+        <div class="col-sm-3">
+            <input type="number" #mNumber>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-warning" (click)="updateDataToStore(mNumber.value, 'mobileEdit')">Update</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <h3>Email :</h3>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" #email>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-warning" (click)="updateDataToStore(email.value, 'emailEdit')">Update</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-success" style="margin-left: 40%; margin-top: 20px;" (click)="naviagteToConsume()">Next page</button>
+        </div>
+    </div>
+</div>
