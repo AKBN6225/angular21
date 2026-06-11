@@ -7,6 +7,7 @@ import { basicReducer } from './topics/storeReal/basicInfo/basicReducer';
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideStore } from '@ngrx/store';
+import { basicDetailsReducerEff} from './topics/storeWithEffects/basicDetails/basicDetailsReducer'
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,6 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
-    provideStore( {userDetails: userReducer, basic: basicReducer }),
+    provideStore( {userDetails: userReducer, basic: basicReducer, effectsReducer: basicDetailsReducerEff }),
   ],
 };
