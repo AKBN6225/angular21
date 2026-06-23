@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Two } from '../two/two';
 import { Store } from '@ngrx/store';
-import { basicDetailsOrganisation } from '../../../storeWithEffects/basicDetails/basicDetailsActions'
+import { basicDetailsOrganisation, basicEffectsCallingApi } from '../../../storeWithEffects/basicDetails/basicDetailsActions';
+
 
 @Component({
   selector: 'app-one',
@@ -22,5 +23,9 @@ export class One implements OnInit {
 
   sendDataToStore(orgg:string){
     this.store.dispatch(basicDetailsOrganisation({orgName: orgg}));
+  };
+
+  CallingApi(){
+    this.store.dispatch(basicEffectsCallingApi())
   }
 }

@@ -1,3 +1,4 @@
 export interface organisationState {
-    organisationName: string
-}
+    organisationName: string,
+    employees: any[];
+};

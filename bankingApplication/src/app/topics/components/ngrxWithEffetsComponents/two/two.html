@@ -1,3 +1,14 @@
 <div class="container">
-    <h1>Organisation Name Entered : {{orgName}}</h1>
+  <h1>
+    Organisation Name Entered :
+    {{ orgName$ | async }}
+  </h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+  <h2>Employees list :</h2>
+
+  @for (emp of (employees$ | async); track emp.id) {
+    <h3>{{ emp.username }}</h3>
+  }
 </div>

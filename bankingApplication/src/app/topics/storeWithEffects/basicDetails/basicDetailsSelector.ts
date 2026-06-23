@@ -10,5 +10,13 @@ export const selectOrganisationName = createSelector(selectEffectsState,
 );
 
 
+export const selectEmployees = createSelector(selectEffectsState,
+  (state: organisationState) => state.employees
+);
+
+
+
+
+
 
 
